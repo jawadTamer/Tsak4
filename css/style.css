@@ -1,0 +1,665 @@
+/* Global Styles */
+:root {
+    --primary-color: #328E6E;
+    --secondary-color: #67AE6E;
+    --accent-color: #90C67C;
+    --light-accent: #E1EEBC;
+    --heading-font: 'Playfair Display', serif;
+    --body-font: 'Poppins', sans-serif;
+}
+
+body {
+    font-family: var(--body-font);
+    font-weight: 300;
+    line-height: 1.6;
+    padding-top: 76px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--heading-font);
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.navbar-brand {
+    font-family: var(--heading-font);
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.nav-link {
+    font-family: var(--body-font);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: var(--light-accent);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+.nav-link.active {
+    color: var(--light-accent) !important;
+    font-weight: 600;
+}
+
+.card-title {
+    font-family: var(--heading-font);
+    font-weight: 700;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.card-text {
+    font-family: var(--body-font);
+    font-weight: 300;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.btn {
+    font-family: var(--body-font);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.hero .lead {
+    font-family: var(--body-font);
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+footer h5 {
+    font-family: var(--heading-font);
+    font-size: 1.2rem;
+    margin-bottom: 1.2rem;
+}
+
+footer p, footer a {
+    font-family: var(--body-font);
+    font-weight: 300;
+    font-size: 0.9rem;
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.price {
+    font-family: var(--heading-font);
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: var(--primary-color);
+}
+
+/* Cart and Wishlist Modal Typography */
+.swal2-title {
+    font-family: var(--heading-font) !important;
+    font-weight: 700 !important;
+}
+
+.swal2-html-container {
+    font-family: var(--body-font) !important;
+    font-weight: 300 !important;
+}
+
+/* About Page Specific */
+.about-hero h1 {
+    font-size: 3.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.about-hero .lead {
+    font-size: 1.3rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+}
+
+.value-card h3 {
+    font-family: var(--heading-font);
+    font-size: 1.4rem;
+    margin: 1rem 0;
+}
+
+.value-card p {
+    font-weight: 300;
+    font-size: 0.95rem;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Featured Items */
+.featured-items {
+    background-color: #f8f9fa;
+}
+
+.card {
+    transition: transform 0.3s;
+    margin-bottom: 20px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Footer */
+footer {
+    margin-top: 0;  /* Changed from 2rem to 0 */
+}
+
+/* Menu Page Styles */
+.menu-section {
+    background-color: #f8f9fa;
+    min-height: 80vh;
+    padding-bottom: 0;  /* Added to remove bottom spacing */
+}
+
+/* About Page Styles */
+.about-hero, .values {
+    padding-bottom: 0;  /* Added to remove bottom spacing */
+}
+
+/* Contact Page Styles */
+.contact-section {
+    background-color: #f8f9fa;
+    min-height: 80vh;
+    padding-bottom: 0;  /* Added to remove bottom spacing */
+}
+
+/* Featured Items Section */
+.featured-items {
+    padding-bottom: 0 !important;  /* Added to override any bootstrap padding */
+}
+
+.category-nav {
+    border-bottom: 1px solid #dee2e6;
+    padding-bottom: 1rem;
+}
+
+.nav-pills .nav-link.active {
+    background-color: var(--primary-color);
+}
+
+.nav-pills .nav-link {
+    color: #333;
+    margin: 0 0.5rem;
+}
+
+.menu-item {
+    margin-bottom: 2rem;
+}
+
+.menu-item img {
+    height: 200px;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+}
+
+.placeholder-loading {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s infinite;
+}
+
+.card:hover .card-img-top {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+.menu-item .card-body {
+    height: 200px;
+    overflow: hidden;
+}
+
+/* About Page Styles */
+.about-hero {
+    padding-top: 2rem;
+}
+
+.value-card {
+    padding: 2rem;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.value-card:hover {
+    transform: translateY(-10px);
+}
+
+.value-card i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+}
+
+/* Contact Page Styles */
+.contact-section {
+    background-color: #f8f9fa;
+    min-height: 80vh;
+}
+
+.contact-info ul li {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.contact-info ul li i {
+    color: var(--primary-color);
+    margin-right: 10px;
+    width: 20px;
+}
+
+.map-container {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+}
+
+/* Form Styles */
+.form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(196, 30, 58, 0.25);
+}
+
+
+/* Cart Styles */
+/* Start of Cart and Wishlist Icons Section */
+#nav-icons {
+    display: flex;
+    align-items: center;
+}
+
+.cart-icon, .wishlist-icon {
+    position: relative;
+    cursor: pointer;
+}
+
+.cart-count, .wishlist-count {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    font-size: 0.7rem;
+}
+
+.wishlist-heart.active,
+.fa-heart.active {
+    color: var(--primary-color);
+}
+
+.wishlist-items {
+    max-height: 300px;
+    overflow-y: auto;
+    padding: 10px;
+}
+
+.wishlist-item {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.wishlist-heart {
+    color: black !important;
+    transition: color 0.3s ease;
+}
+
+.wishlist-heart.active {
+    color: var(--primary-color) !important;
+}
+
+.wishlist-icon i {
+    color: white;
+}
+
+.wishlist-icon:hover i {
+    color: var(--primary-color);
+}
+
+.cart-icon i {
+    color: white;
+    font-size: 1.2rem;
+}
+.cart-icon:hover i {
+    color: var(--secondary-color);
+    cursor: pointer;
+}
+/* End of Cart and Wishlist Icons Section */
+
+/* Start of Carousel Styles Section */
+#pizzaCarousel {
+    width: 100%;
+    margin: 0;
+    position: relative;
+}
+
+#pizzaCarousel .carousel-item {
+    height: 80vh;
+}
+
+#pizzaCarousel .carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#pizzaCarousel .carousel-caption {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+    bottom: 50%;
+    transform: translateY(50%);
+}
+/* End of Carousel Styles Section */
+
+#pizzaCarousel .carousel-caption h5 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+#pizzaCarousel .carousel-caption p {
+    font-size: 1.2rem;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%;
+    opacity: 0.8;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 30px;
+    border-radius: 50%;
+}
+
+.carousel-indicators {
+    bottom: 30px;
+}
+
+.carousel-indicators button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+
+.carousel-content {
+    position: relative;
+    height: 80vh;
+}
+
+.carousel-content img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.7);
+}
+
+.carousel-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.6));
+}
+
+.carousel-text {
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: white;
+    width: 80%;
+    max-width: 800px;
+    padding: 20px;
+    background: rgba(0,0,0,0.5);
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+}
+
+.carousel-text .pizza-name {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.carousel-text .pizza-description {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+.carousel-text .pizza-price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .carousel-text .pizza-name {
+        font-size: 2rem;
+    }
+    
+    .carousel-text .pizza-description {
+        font-size: 1rem;
+    }
+    
+    .carousel-text .pizza-price {
+        font-size: 1.2rem;
+    }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Navbar Styling */
+.navbar-dark {
+    background-color: var(--primary-color) !important;
+}
+
+.nav-link {
+    color: white !important;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--light-accent) !important;
+}
+
+/* Buttons Styling */
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+}
+
+.btn-outline-primary {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+/* Card Styling */
+.card {
+    border-color: var(--accent-color);
+}
+
+.card:hover {
+    box-shadow: 0 10px 20px rgba(50, 142, 110, 0.2);
+}
+
+.card-title {
+    color: var(--primary-color);
+}
+
+/* Wishlist Heart */
+.wishlist-heart.active {
+    color: var(--primary-color) !important;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary-color);
+}
+
+/* Category Tabs */
+.nav-pills .nav-link.active {
+    background-color: var(--primary-color);
+}
+
+.nav-pills .nav-link {
+    color: var(--primary-color);
+}
+
+.nav-pills .nav-link:hover {
+    background-color: var(--light-accent);
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-color) !important;
+}
+
+/* Cart and Wishlist Icons */
+.cart-icon i, .wishlist-icon i {
+    color: white;
+}
+
+.cart-icon:hover i, .wishlist-icon:hover i {
+    color: var(--light-accent);
+}
+
+/* Price Tags */
+.card-text strong {
+    color: var(--primary-color);
+}
+
+/* Section Backgrounds */
+.featured-items, .menu-section {
+    background-color: var(--light-accent);
+}
+
+/* Hero Section Overlay */
+.carousel-overlay {
+    background: linear-gradient(rgba(50, 142, 110, 0.2), rgba(50, 142, 110, 0.6));
+}
+
+/* Cart Badge */
+.badge.bg-danger {
+    background-color: var(--secondary-color) !important;
+}
+
+/* Sweet Alert Customization */
+.swal2-confirm {
+    background-color: var(--primary-color) !important;
+}
+
+.swal2-cancel {
+    background-color: var(--accent-color) !important;
+}
+
+/* Search Styling */
+#searchInput {
+    border-color: var(--primary-color);
+    transition: all 0.3s ease;
+}
+
+#searchInput:focus {
+    box-shadow: 0 0 0 0.2rem rgba(50, 142, 110, 0.25);
+    border-color: var(--primary-color);
+}
+
+#searchButton {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+#searchButton:hover {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+}
+
+/* Search Results */
+.search-highlight {
+    background-color: rgba(50, 142, 110, 0.1);
+    padding: 2px;
+    border-radius: 2px;
+}
+
+.lazy {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.lazy.loaded {
+    opacity: 1;
+}
+ 
