@@ -662,4 +662,31 @@ footer {
 .lazy.loaded {
     opacity: 1;
 }
- 
+
+
+.img-fluid {
+    border: 2px solid var(--primary-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    max-width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+@media (min-width: 1200px) {
+    .img-fluid {
+        max-height: 500px;
+    }
+}
+
+@media (max-width: 768px) {
+    .img-fluid {
+        max-height: 300px;
+    }
+}
+
+@media (max-width: 576px) {
+    .img-fluid {
+        max-height: 250px;
+    }
+}
